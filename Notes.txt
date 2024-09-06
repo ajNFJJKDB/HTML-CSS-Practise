@@ -1,0 +1,222 @@
+HTML defines the structure of the web page, 
+CSS enhances the design of the web page,
+Js enables interactivity
+
+old websites - https://www.webdesignmuseum.org/
+
+client-server entity relationship in www,
+client requests and server responds with resource,
+If the content served by server is client independent, the corresponding webpage is static, static - hard coded content,
+If the content served by server is client dependent (user-specific), the corresponding webpage is dynamic, dynamic - real time and user adaptable content.
+
+Front-end = presentation of data and responsiveness of webpage, client side (HTML,CSS,Js,React),
+Back-end = preparing corresponding data for the request with applying logic(which includes authentications), server side (Node.Js),
+The one who connects front-end and back-end is RESTful API/ web-socket communications.
+
+Communication flow in www:
+Client requests a URL to browser, interface is defined using front-end logic,
+Browser gives the URL to ISP,
+ISP uses DNS, finds the corresponding IP address of the server and provides it to client, every device in internet has a IP address,
+Now the connection between client and server is established,
+Browser sends the request using HTTP to server's IP,
+Now the client's request is served by server using a backend logic.
+
+HTML - Hyper Text Markup Language, it defines structure of the webpage,
+Hyper Text - link redirection property, outside (other webpages) or inside the webpage,
+Markup - usage of markers/indicators/tags to define the structure of elements in webpage,
+
+HTML page can be divided into three sections: Header, Body, Footer,
+HTML page is hierarchial (tree like),
+Html elements can defined using tags (a opening tag and closing tag),
+Root tag is <html> ... </html> - keyword for whole page itself,
+children of <html> tag are: head and body tag (broad division),
+head tag contains meta data (information about the page like title ...),
+body tag contains the actual data (presentation data), it can have many children tags, they can have sub childrens and so on,
+
+Browser optimises the html code to render it best way possible,
+<!DOCTYPE html> indicates the browser that we are using HTML5, This declaration is case insensitive,
+The basic default code that editor provides us is known as boiler code (defines the basic structure of the page),
+example for Boiler code:
+	<!DOCTYPE html>
+
+	<html lang="en" dir="rtl">
+		<head>
+    			<meta charset="utf-8">
+		</head>
+		<body>
+		</body>
+	</html>
+lang attribute of html tag defines the language of the content,
+dir attribute of html tag defines how the content to be displayed, *double quotes is important*
+charset attribute of meta tag helps us choose the character encoding scheme (characters to binary code),
+
+<!-- comment in HTML -->
+attributes are given in opening tags 
+
+Let's create a simple blog page:
+*template*
+structure:
+	head
+		title:title of page (similar to content heading)
+	body	
+		header
+			title (insititution name)
+			logo
+		body
+			content heading
+			content
+				intro paragraph
+				list (list of paragraphs)
+				closure paragraph
+		footer
+			social links
+
+Miscellaneous Tags:
+1) <title> tag for title of page
+2) <h1> to <h6> tags for different heading varients 
+3) <br> tag for introducing line breaks, it is single tag not a pair one, it don't need </br> -> example of self-closing tag
+4) <p> paragraph tag
+5) &nbsp - to add no break space in texts of html (html removes unnecessaory spaces automatically) (universal including texts in title tag)
+6) <hr> tag for introducing horizontal ruler/line, it is self-closing tag
+7) <center> tag for center alignment, You can enclose any element like img and etc. within this tag to align them center
+8) <i> for font style italic, <u> tag for underlining, both can be nested within content tags
+9) align attribute can be used in all the content tags to set alignemnt of the content ["center", "left", "right"]
+
+Lists in HTML: Ordered list (numbered ones), Unordered list (Bullets)
+unordered list : <ul> <li>...</li> </ul>, ul=unordered list, li=list item, type attribute [disc, circle, square, by default = disc],
+ordered list : <ol> <li>...</li> </ol>, ol=ordered list, li=list item, type attribute [A - A,B,C..., a - a,b,c,..., i - i,ii,iii,..., I - I,II,III,.., 1 - 1,2,3,... by default = 1,2,3...],
+start attribute [to set the starting value for ordering to begin with]
+*think of nested lists*
+dl=>description list?
+
+Images in HTML: <img>
+Attributes,
+src="file path = absolute path or relative path" 
+alt="alternative text to be displayed if img file failed to load"
+align="for setting alignment", but for center aligning we use <center> tag
+height="for setting heigth of image", ex:"200"
+width="for setting width of image", ex:"200", "100%","50%" and etc. => for specifying the width size with accordance to the size of the screen
+
+Hyperlinks in HTML: <a> text </a>, text serves as hyperlink
+Attributes,
+href="link which should be redirected to when user clicks on text"
+target="to specify opening conditon", "_blank" = for opening link in new tab
+You can enclose any element like img and etc. within this tag to make them as hyperlink
+
+Adding navigation block to blog, -> done
+we need to structure the page with grouping/hierarchies/blocks within body tag,
+div tag:  It can apply certain function/styles with css to a block collectively,
+It is a non semantic tag(div,span), it is used for adding common style to the block, 
+semantic tag: It adds meaning to the blocks, It doesn't add any functionality, Ex: nav,header,main,footer,section,aside,hi,p = It defines the thematic relations of the block, => for browser and developer
+we can id attribute to unique the block (for navigation purposes) for both semantic and non-semantic tags,
+id attribute is simple string value (*on using it with href, we must use # in the start),
+
+Adding internal links to the page,
+1) set id to the element/block(semantic/non-semantic),
+2) create new anchor tag with href=#id.
+
+Block type elements: They start in new line, They occupy the complete space, Ex: hi (heading tag), p, div,
+Inline type elements: They start in in line, They occupy only the necessory space, Ex: img, a (anchor),
+Inline-Block type elements?
+
+Text formatting tags(Inline elements):
+b - bold
+i - italic
+strong - highlighting important texts
+sup - super script
+sub - sub script
+q - quoted text
+
+*div-block type, span-inline type
+Special characters in HTML - &nbsp;(no break space), &lt;(lesser than < ), &gt;(greater than >), &apos;(apostope '), &amp:(&), &ensp;(two spaces), &emsp;(four spaces)
+Emojies - https://unicode.org/emoji/charts/full-emoji-list.html
+
+Tables in HTML:
+table tag to define the table [border attribute to set the border size],
+within table tag, 
+	we have tr tag to define the row,
+	within tr tag, 
+		we have td tag to define cell values,
+		we have th tag to define table header values,
+			to set column name or row name,
+			[colspan attribute to set number of columns under a certain column heading, rowspan attribute to set number of rows under a certain row heading],
+	we have caption tag to define table name,
+	we have thead tag to group header rows,
+	we have tfoot tag to group footer rows,
+	we have tbody tag to group main content rows,
+*Nested tables?
+
+*HTML cheat sheet = https://html.com/wp-content/uploads/html-cheat-sheet.pdf
+
+* why we need semantic tags, it helps in scanning, SEO (Search Engine Optimization), and etc.
+* using semantic tags for defining the layout of the webpage.
+
+Forms in HTML:
+Forms are used for data collection,
+under form tag,
+we have action attribute to set the receiver end (server-side) URL whom we have to send the prompted values,
+we have method attribute to specify the HTTP request method, 
+[get    => to receive data from server(The prompted values are visibly in the page URL, data is sent in header, handle small amount of data, and idempotent=> have to wait until first request is served), 
+ post   => to send data to/ update existing data in server(It is more secure than get incase of cyber attacks), handle larger amount of data, and non-idempotent=> simultaneous multiple request serving,
+ put    => to update/replace the entire resources if it exist/ if it doesn't it creates new one,
+ patch  => to update/replace the some part of the resources(partial updation),
+ delete => to delete a resource from server, idempotent]  
+	we have input tag to prompt values from user [type attribute to define the type of input, Ex: text, password, submit, number, time, url, email, range and etc., required=> for compulsory filling],
+		for text type, we have placeholder attribute,
+		for range type, we have min, max and step atrributes,
+		boolean attributes: required(compulsary filling required), disabled(no filling),
+		value attribute for defining default value which can changed while filling,
+		name attribute for defining name of the input field *prompted data is stored as name=value* so we have to give name to each input for data processing,
+	we have radio button as input, we need to collectively give a same name and different value for each option, for default option choice we use checked attribute (boolean type),	We can select one option only
+	we have checkbox as input, we need to collectively give a same name and different value for each option, We can select more than one option, we can use checked attribute here too,
+	we have button as input, with value attribute to display, *use dedicated button tag*
+	we have label tag to label the corresponding input tags, for attribute takes id for pointing to respective input tags,
+	*id within the code, name outside the code for how prompted packets are sent out to local host*
+	we have dropdown list( for any option), ddlist can be implemented with select tag[name attribute must],
+		within select tag, we have option tag to define different options and their corresponding values,
+	we have textarea tag to get larger text input from user, rows and cols attribute to set the size of textarea,
+	input tag is a inline element, we need to use div tag to use it as block elements,
+	we have button tag, with type = button, submit(input type=submit, to submit form inputs), reset(to clear the form, to default state), we enclose img within this tag to set img as button,
+	we enclose any basic data forms within button tag to make it as label of button,
+	*what will if i click the button, just what actuation?, if i click submit(prompted values are given for backend processing), if i click reset(form is cleared and set to default state)*	
+
+* client(URL) -> ISP(DNS to IP) and connects client to server -> HTTP request from client to server -> HTTP response from client to server
+
+Media tags in HTML:
+audio tag for audio files,
+within audio tag,
+	we can define multiple sources, we define each source with source tag,
+	if one source fails, browser will try the next( source hierarchy is top to bottom, we can even have error msg at the bottom if all the source files are failed to load),
+	atrributes of source tag are src(for setting source file path), type(for setting file format),
+attributes of audio tag are src(for setting source file path), controls(boolean attribute) => for dislaying playback controls),
+video tag for video files,
+within video tag,
+	we can define multiple sources, we define each source with source tag,
+	if one source fails, browser will try the next( source hierarchy is top to bottom, we can even have error msg at the bottom if all the source files are failed to load),
+	atrributes of source tag are src(for setting source file path), type(for setting file format),
+attributes of video tag are src(for setting source file path), controls(boolean attribute) => for dislaying playback controls), height and width for defining the size of the video file in page,
+figure tag for image files,
+within figure tag,
+	we can use img tag to set the sources,
+	we use figcaption tag to give a caption/label to image(It is enhanced by CSS),
+iframe tag for youtube videos => embedded block of share block in youtube site,
+* source being embedded values?
+
+
+Tags unders head tag:
+link tag for setting icon of webpage(self closing tag),
+	Attributes [rel=relationship with the favicon(icon), link=location of image, type=media type(image/x-icon)],
+Meta tag to add meta information to the webpage,
+	Attributes [name: description, keywords, author and etc., charset: to set character encoding type of the page(UTF-8), content:setting values for each type of meta data, http-equiv:?],
+
+Summary: 
+It is hierarchial,
+html->head,body,
+head contains meta data(title, meta(author, description, keywords, charset, http-equiv), 
+body contains data that to be respresented,
+	simple data forms include headings, p, media files, links
+	data collections include lists(ul,ol,dl), tables
+	Prompting value from user => Forms(action,method) -> input(text,password,time,range,number), dropdown list(select), textarea(for multiline text input), button(submit,reset,button),
+			             Remember to use placeholder attribute for default input values, checked for option types, 
+			             Button label specification -> enclosing for label of button tag, value for button input type,
+			             Labelling inputs -> use label tag, with for attribute and enclosing for labels,

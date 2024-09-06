@@ -1,0 +1,47 @@
+﻿@keyframes entireslide{
+    from{
+        transform:translateX(-40vw);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+body{
+    margin:0px;
+}
+
+#billboard {
+    border:2px solid aqua;
+    border-left:0px;
+    border-right:0px;
+    background-color:black;
+    width:100%;
+    height:300px;
+    display:flex;
+    position:absolute;
+    top:50%;
+    align-items:center;
+
+}   
+
+#billboard p {
+    color: aqua;
+    font-size: 10em;
+    font-weight: bold;
+    transform: translateX(-100%);
+    animation-name: entireslide;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/*
+#billboard:hover{
+    border-color:aqua;
+    background-color:black;
+}
+
+#billboard p:hover {
+    color: aqua;
+}*/

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>FORMS</title>
+</head>
+<body>
+    <center>
+        <br />
+        <i><b><h1 id="top">FORMS</h1></b></i>
+        <br />
+        <hr />
+        <form action="" method="get">
+            <table border="1">
+                <tr>
+                    <td>
+                        <label id="text">Text&emsp;&ensp;&emsp;&nbsp;</label>
+                        <input id="text" name="text" type="text" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="password">Password&ensp;&nbsp;</label>
+                        <input id="password" name="password" type="password" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="number">Number&emsp;&nbsp;</label>
+                        <input id="number" name="number" type="number" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="time">Time&emsp;&ensp;&emsp;</label>
+                        <input id="time" type="time" value="12:00" disabled />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="url">URL&emsp;&emsp;&ensp;</label>
+                        <input id="url" name="url" type="url" placeholder="www.abc.com" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="email">Email&emsp;&nbsp;&emsp;</label>
+                        <input id="email" name="email" type="email" placeholder="abc@xyz.com" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="range">Range&emsp;&nbsp;</label>
+                        <input id="range" name="range" type="range" min="0" max="100" step="10" value="40" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <label id="radio">Radio Buttons</label><br />
+                            <input id="radio" type="radio" name="radio" value="opt1" checked required />option 1<br />
+                            <input type="radio" name="radio" value="opt2" />option 2<br />
+                            <input type="radio" name="radio" value="opt3" />option 3<br />
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <label id="checkbox">CheckBox</label><br />
+                            <input id="checkbox" type="checkbox" name="checkbox" value="opt1" checked required />option 1<br />
+                            <input type="checkbox" name="checkbox" value="opt2" />option 2<br />
+                            <input type="checkbox" name="checkbox" value="opt3" />option 3<br />
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <label for="dropdownlist">Drop Down List</label>
+                            <select id="dropdownlist" name="dropdownlist" required>
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <label for="textarea">Text area</label>
+                            <br />
+                            <textarea id="textarea" name="textarea" rows="10" cols="30"></textarea>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <input type="button" name="button" value="Button type" />
+                            <br />
+                            <button type="button" name="button">
+                                <img src="yt_logo.png" height="100" width="100"/>
+                            </button>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <input type="submit" value="Next" />
+                            <button type="reset" name="button">
+                                Reset
+                            </button>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <hr />
+    <a href="#top">
+        Back to Top
+    </a>
+</body>
+</html>

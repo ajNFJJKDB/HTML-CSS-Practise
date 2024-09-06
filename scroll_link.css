@@ -1,0 +1,30 @@
+﻿#scroll-link {
+    position: relative;
+    left: 45vw;
+    top: 45vh;
+    background-color: aqua;
+    border: 2px solid black;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    transition: width 1s ease-out, background-color 0.5s linear 1s, border-color 0.5s linear 1s;
+    overflow: hidden;
+}
+#scroll-link a {
+    text-decoration: none;
+    font-weight: 700;
+    font-family: Cambria;
+    font-size: 500%;
+    color:black;
+    transition:color 0.5s linear 1s;
+}
+
+#scroll-link:hover{
+    width:550px;
+    background-color:black;
+    border-color:aqua;
+}
+
+#scroll-link a:hover{
+    color:aqua;
+}
